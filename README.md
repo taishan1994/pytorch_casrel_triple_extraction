@@ -1,0 +1,2 @@
+# pytorch_casrel_triple_extraction
+基于pytorch的CasRel进行三元组抽取。

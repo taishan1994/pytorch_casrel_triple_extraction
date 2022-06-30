@@ -246,7 +246,7 @@ class BertForRe:
     def predict(self, raw_text, model, tokenizer):
         model.eval()
         with torch.no_grad():
-            tokens = fine_grade_tokenize(raw_text, tokenizer)
+            tokens = [i for i in raw_text]
             if len(tokens) > self.args.max_seq_len:
               tokens = tokens[:self.args.max_seq_len]
             token_ids = tokenizer.convert_tokens_to_ids(tokens)
